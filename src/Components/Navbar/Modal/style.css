@@ -1,0 +1,45 @@
+.search-input-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #222;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-input-modal input {
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+.search-input-modal button {
+  margin-left: 0.5rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.search-input-modal button:hover {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.close-btn {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  right: 10rem;
+  top: 5rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--secondary-color);
+}

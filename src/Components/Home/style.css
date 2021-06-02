@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
+.fixed-bg {
+  width: 100%;
+  background: url("../../Image/f-bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+}
+
+.images {
+  display: flex;
+}

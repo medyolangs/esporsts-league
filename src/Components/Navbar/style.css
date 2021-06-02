@@ -1,0 +1,122 @@
+/* new styles */
+.wrapper {
+  background: var(--primary-color);
+  width: 100vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar .icon {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+.navbar .navbar-img {
+  width: 200px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.navbar .navbar-img img {
+  width: 100%;
+  margin-left: 6rem;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 110px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .border-style {
+  width: 100%;
+  height: 50px;
+  border-right: 1px solid #4a4b4b;
+  border-bottom: 1px solid #4a4b4b;
+  transform: skewX(20deg);
+}
+
+.navbar .navbar-nav .nav li {
+  margin-left: 2rem;
+  position: relative;
+}
+
+.navbar .navbar-nav .nav li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-nav .nav li::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -9px;
+  height: 3px;
+  width: 100%;
+  background: var(--secondary-color);
+  transform: scale(0);
+  transition: all 200ms ease-in;
+}
+
+/* hover effects */
+.navbar .navbar-nav .nav li:hover::after {
+  transform: scale(1);
+}
+
+.navbar .search-box:hover {
+  color: var(--secondary-color);
+}
+
+.mobile-menu-bar {
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.mobile-menu-bar:hover {
+  color: var(--secondary-color);
+}
+
+/* active nav */
+.navbar .navbar-nav .nav li.active-nav::after {
+  transform: scale(1);
+}
+
+/* width responsiveness */
+@media (max-width: 846px) {
+  .navbar .navbar-nav {
+    display: none;
+  }
+  .navbar .navbar-img {
+    width: 150px;
+  }
+  .navbar .navbar-img img {
+    margin-left: 0;
+  }
+}
+@media (max-width: 720px) {
+  .icon .search-icon {
+    display: none;
+  }
+  .mobile-menu-bar {
+    display: block;
+  }
+}

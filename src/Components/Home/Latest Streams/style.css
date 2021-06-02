@@ -1,0 +1,30 @@
+.slider {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 350px;
+  position: relative;
+  border: 1px solid red;
+}
+.slider-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 500px;
+  pointer-events: none;
+  cursor: grab;
+  transition: all 200ms ease-in;
+  border: 1px solid green;
+}
+
+.slider-img {
+  cursor: grab;
+  width: 100%;
+  margin: 1rem;
+}

@@ -14,7 +14,7 @@
   width: 100%;
   color: #fff;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 900;
   position: relative;
 }
@@ -53,18 +53,11 @@
   transition: background 200ms ease-in;
 }
 
-.matches .match-nav .ogm::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: skew(20deg);
-}
 
 .active {
   background: #d60808;
 }
-.matches .match-nav .ogm:hover {
+.matches .match-nav .ogm:hover{
   background: #d60808;
 }
 .matches .match-nav .uce:hover {

@@ -47,7 +47,7 @@ const Matches: React.FC = () => {
           <Match />
           <Match />
           <Match />
-        </div>{" "}
+        </div>
       </div>
     </div>
   )

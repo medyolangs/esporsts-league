@@ -81,7 +81,7 @@
   transform: scale(1);
 }
 
-.navbar .search-box:hover {
+.navbar .search-icon:hover {
   color: var(--secondary-color);
 }
 

@@ -8,6 +8,7 @@ interface Props {
 
 const Images: React.FC<Props> = () => {
   const innerSliderRef = React.useRef<HTMLDivElement>(null)
+  const slider = React.useRef<HTMLDivElement>(null)
 
   let [startx, setStartX] = React.useState<number>(0)
   let [pressed, setPressed] = React.useState<boolean>(false)
@@ -16,7 +17,7 @@ const Images: React.FC<Props> = () => {
   const sliderF1 = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.type === "mousedown") {
       setPressed(true)
-      setStartX(e.nativeEvent.offsetX - 0)
+      setStartX(e.nativeEvent.offsetX - innerSliderRef.current.offsetLeft)
       e.currentTarget.setAttribute("style", "cursor: grabbing")
     }
     if (e.type === "mouseenter") {
@@ -30,8 +31,19 @@ const Images: React.FC<Props> = () => {
       e.preventDefault()
       setX(e.nativeEvent.offsetX)
       innerSliderRef.current?.setAttribute("style", `left: ${x - startx}px`)
-      console.log("startx: " + startx)
-      console.log("x: " + x)
+    }
+    checkBoundary()
+  }
+
+  function checkBoundary() {
+    const inner = innerSliderRef.current?.getBoundingClientRect()
+    const outer = slider.current?.getBoundingClientRect()
+    if (parseInt(innerSliderRef.current?.style.left) > 0) {
+      console.log("if part")
+      innerSliderRef.current.style.left = "0px"
+    } else if (inner?.right < outer?.right) {
+      console.log("else part")
+      innerSliderRef.current.style.left = `-${inner?.width - outer?.width}px`
     }
   }
 
@@ -42,6 +54,7 @@ const Images: React.FC<Props> = () => {
   return (
     <div
       className="slider"
+      ref={slider}
       onMouseDown={sliderF1}
       onMouseEnter={sliderF1}
       onMouseUp={sliderF1}

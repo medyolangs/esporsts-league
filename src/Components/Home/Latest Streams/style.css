@@ -6,7 +6,7 @@
   overflow-x: hidden;
   height: 350px;
   position: relative;
-  border: 1px solid red;
+  border: 3px solid red;
 }
 .slider-inner {
   position: absolute;
@@ -20,7 +20,7 @@
   pointer-events: none;
   cursor: grab;
   transition: all 200ms ease-in;
-  border: 1px solid green;
+  border: 3px solid blue;
 }
 
 .slider-img {

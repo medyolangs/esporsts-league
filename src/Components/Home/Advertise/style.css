@@ -19,7 +19,7 @@
 
 .stream-image,
 .event-image {
-  width: 400px;
+  width: 450px;
 }
 .stream-image img {
   width: 100%;
@@ -35,16 +35,25 @@
 }
 .stream-txt p,
 .event-txt p {
-  font-size: 0.9rem;
+  margin-top: 1rem;
+  line-height: 5px;
+  font-size: 1rem;
   color: #b3b9b9;
+  font-family: sans-serif;
 }
+
 .ad-btn {
   outline: none;
+  font-size: 1.5rem;
   border: none;
   text-transform: uppercase;
   color: #fff;
   padding: 0 0.5rem;
   background: #d60808;
+}
+
+.ad-btn:hover {
+  background: #9d2d2d;
 }
 
 .advert-events {
@@ -62,7 +71,6 @@
 
   .stream-txt h1,
   .event-txt h1 {
-    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 900;
   }
@@ -92,5 +100,13 @@
   }
   .event-txt {
     order: 2;
+  }
+}
+
+/* responsive design */
+@media (max-width: 576px) {
+  .stream-image,
+  .event-image {
+    width: 300px;
   }
 }

@@ -12,6 +12,15 @@ const TopBar: React.FC = () => {
   const [showSearchInput, setShowSearchInput] = React.useState<boolean>(false)
   const [showMobileNav, setShowMobileNav] = React.useState<boolean>(false)
 
+  const [uPath, setUPath] = React.useState<string>()
+
+
+  React.useEffect(()=> {
+    setUPath(window.location.pathname)
+  }, [uPath])
+
+  console.log(uPath)
+
   const handleSearchInputDisplay = (
     e: React.MouseEvent<HTMLDivElement>
   ): void => {
@@ -55,13 +64,22 @@ const TopBar: React.FC = () => {
           <div className="navbar-nav">
             <div className="border-style"></div>
             <ul className="nav">
-              <li className="active-nav">
+              <li
+                className={uPath === "/" ? "active-nav" : ""}
+                onClick={()=> setUPath(window.location.pathname)}
+              >
                 <Link to="/">home</Link>
               </li>
-              <li>
+              <li
+                className={uPath === "/categories" ? "active-nav" : ""}
+                onClick={()=> setUPath(window.location.pathname)}
+              >
                 <Link to="/categories">categories</Link>
               </li>
-              <li>
+              <li
+                className={uPath === "/streams" ? "active-nav" : ""}
+                onClick={()=> setUPath(window.location.pathname)}
+              >
                 <Link to="/streams">streams</Link>
               </li>
             </ul>

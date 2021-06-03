@@ -29,10 +29,12 @@ const TopBar: React.FC = () => {
     e: React.SyntheticEvent<HTMLButtonElement, Event>
   ): void => {
     setShowMobileNav(!showMobileNav)
+    document.body.classList.add("stop-scrolling")
   }
 
   const closingWithXIcon = (e: React.MouseEvent<HTMLDivElement>): void => {
     setShowMobileNav(false)
+    document.body.classList.remove("stop-scrolling")
   }
 
   return (

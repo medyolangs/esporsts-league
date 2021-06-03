@@ -45,11 +45,11 @@ const MobileNav: React.FC<Props> = ({ close }) => {
         three: "mob-active",
         four: "",
       })
-    } 
+    }
   }, [])
 
   return ReactDOM.createPortal(
-    <>
+    <div className="mob-center">
       <ul className="mobile-nav">
         <div className="close-mobile-btn" onClick={close}>
           <MDBIcon icon="times" />
@@ -70,7 +70,7 @@ const MobileNav: React.FC<Props> = ({ close }) => {
           </a>
         </li>
       </ul>
-    </>,
+    </div>,
     document.getElementById("mobile") as HTMLDivElement
   )
 }

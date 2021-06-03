@@ -50,9 +50,13 @@ const Images: React.FC<Props> = ({ image }) => {
   }
 
   React.useEffect(() => {
-    setTimeout(() => {
+    if (window.innerWidth <= 920) {
       setLoading(false)
-    }, 2000)
+    } else {
+      setTimeout(() => {
+        setLoading(false)
+      }, 2000)
+    }
   }, [image])
 
   window.addEventListener("mouseup", () => {

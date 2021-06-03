@@ -27,10 +27,6 @@
   margin: 1rem;
 }
 
-.svg-loading {
-  color: #fff;
-}
-
 @media (max-width: 920px) {
   .slider {
     display: none;

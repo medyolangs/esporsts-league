@@ -21,3 +21,8 @@ body {
   --lame-color: #969696;
   --darkish-color: #162238;
 }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

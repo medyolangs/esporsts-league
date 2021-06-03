@@ -1,18 +1,23 @@
-/* mobile nav */
-.mobile-nav {
+.mob-center {
+  display: grid;
+  place-items: center;
   position: fixed;
   background: var(--primary-color);
   top: 0;
   left: 0;
   bottom: -100px;
   right: 0;
+}
+
+.mobile-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   list-style: none;
   transition: all 200ms ease-in-out;
-  /* opacity: 0; */
+  margin: 0;
+  padding: 0;
 }
 
 .mobile-nav li {
@@ -30,7 +35,7 @@
 .close-mobile-btn {
   display: block;
   position: absolute;
-  right: 5rem;
+  right: 2rem;
   top: 4rem;
   color: #fff;
   font-size: 2rem;

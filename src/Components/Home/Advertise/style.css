@@ -8,13 +8,13 @@
   flex-direction: column;
   margin-top: 5rem;
   color: #fff;
+  padding: 2rem 0;
 }
 
 .stream-advert {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1rem;
 }
 
 .stream-image,
@@ -49,6 +49,7 @@
   text-transform: uppercase;
   color: #fff;
   padding: 0 0.5rem;
+  font-weight: 500;
   background: #d60808;
 }
 
@@ -66,7 +67,7 @@
 @media (max-width: 1020px) {
   .stream-image,
   .event-image {
-    width: 200px;
+    width: 300px;
   }
 
   .stream-txt h1,
@@ -108,5 +109,12 @@
   .stream-image,
   .event-image {
     width: 300px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stream-image,
+  .event-image {
+    width: 100vw;
   }
 }

@@ -14,12 +14,9 @@ const TopBar: React.FC = () => {
 
   const [uPath, setUPath] = React.useState<string>()
 
-
-  React.useEffect(()=> {
+  React.useEffect(() => {
     setUPath(window.location.pathname)
   }, [uPath])
-
-  console.log(uPath)
 
   const handleSearchInputDisplay = (
     e: React.MouseEvent<HTMLDivElement>
@@ -58,29 +55,29 @@ const TopBar: React.FC = () => {
               )}
             </div>
           </div>
-          <div className="navbar-img">
+          <Link className="navbar-img" to="/">
             <img src="./images/logo.png" alt="" />
-          </div>
+          </Link>
           <div className="navbar-nav">
             <div className="border-style"></div>
             <ul className="nav">
               <li
                 className={uPath === "/" ? "active-nav" : ""}
-                onClick={()=> setUPath(window.location.pathname)}
+                onClick={() => setUPath(window.location.pathname)}
               >
                 <Link to="/">home</Link>
               </li>
               <li
-                className={uPath === "/categories" ? "active-nav" : ""}
-                onClick={()=> setUPath(window.location.pathname)}
+                className={uPath === "/egames" ? "active-nav" : ""}
+                onClick={() => setUPath(window.location.pathname)}
               >
-                <Link to="/categories">categories</Link>
+                <Link to="/egames">EGames</Link>
               </li>
               <li
-                className={uPath === "/streams" ? "active-nav" : ""}
-                onClick={()=> setUPath(window.location.pathname)}
+                className={uPath === "/estreams" ? "active-nav" : ""}
+                onClick={() => setUPath(window.location.pathname)}
               >
-                <Link to="/streams">streams</Link>
+                <Link to="/estreams">EStreams</Link>
               </li>
             </ul>
           </div>

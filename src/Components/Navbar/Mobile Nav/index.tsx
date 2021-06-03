@@ -31,28 +31,21 @@ const MobileNav: React.FC<Props> = ({ close }) => {
         three: "",
         four: "",
       })
-    } else if (window.location.pathname === "/categories") {
+    } else if (window.location.pathname === "/egames") {
       setStyleMobNav({
         one: "",
         two: "mob-active",
         three: "",
         four: "",
       })
-    } else if (window.location.pathname === "/streams") {
+    } else if (window.location.pathname === "/estreams") {
       setStyleMobNav({
         one: "",
         two: "",
         three: "mob-active",
         four: "",
       })
-    } else if (window.location.pathname === "/about") {
-      setStyleMobNav({
-        one: "",
-        two: "",
-        three: "",
-        four: "mob-active",
-      })
-    }
+    } 
   }, [])
 
   return ReactDOM.createPortal(
@@ -67,18 +60,13 @@ const MobileNav: React.FC<Props> = ({ close }) => {
           </a>
         </li>
         <li>
-          <a href="categories" className={styleMobNav.two}>
-            Categories
+          <a href="/egames" className={styleMobNav.two}>
+            EGames
           </a>
         </li>
         <li>
-          <a href="streams" className={styleMobNav.three}>
-            Streams
-          </a>
-        </li>
-        <li>
-          <a href="about" className={styleMobNav.four}>
-            About
+          <a href="estreams" className={styleMobNav.three}>
+            EStreams
           </a>
         </li>
       </ul>

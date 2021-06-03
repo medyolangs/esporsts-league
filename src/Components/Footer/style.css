@@ -2,23 +2,131 @@
   margin-top: 3rem;
   background: var(--primary-color);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.footer .social-media-links a {
-  margin-right: 0.5rem;
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-}
-
-.footer .copyright {
-  font-family: sans-serif;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 0;
   color: #fff;
 }
 
-.footer .copyright a {
-  margin-left: 0.5rem;
-  text-decoration: underline;
+.footer-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-wrapper .about-us .abt-title {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  text-transform: uppercase;
   color: var(--secondary-color);
+}
+
+.footer-wrapper .about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 600px;
+}
+
+.footer-wrapper .about-us span {
+  font-size: 1.2rem;
+  font-weight: 1000;
+}
+
+.about-us p {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.footer-wrapper .more-links {
+  width: 150px;
+  padding: 0 1rem;
+}
+
+.footer-wrapper .more-links span {
+  font-size: 1rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.footer-wrapper .more-links .links a {
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-wrapper .more-links .links a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-wrapper .contact-us span {
+  font-size: 1rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.footer-wrapper .contact-us .social-media-links {
+  margin: 0.5rem 0;
+}
+
+.footer-wrapper .contact-us .social-media-links a {
+  font-size: 1.2rem;
+  color: #fff;
+  padding-right: 1rem;
+}
+
+.footer-wrapper .contact-us .social-media-links a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-wrapper .contact-us .addr {
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.footer .copyright {
+  padding-top: 2rem;
+  font-weight: 700;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+  .footer-wrapper .about-us {
+    align-items: center;
+  }
+  .footer-wrapper .about-us p {
+    text-align: center;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-wrapper .more-links {
+    padding: 0;
+  }
+  .footer-wrapper .abt-title {
+    align-items: flex-start;
+  }
+  .footer-wrapper .about-us {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .footer-wrapper .about-us span {
+    font-size: 1rem;
+  }
+  .footer-wrapper .about-us p {
+    text-align: left;
+  }
 }

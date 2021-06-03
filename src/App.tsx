@@ -2,8 +2,11 @@ import React from "react"
 
 import TopBar from "./Components/Navbar/index"
 import MainPage from "./Components/Home/index"
-import Footer from "./Components/Footer/index"
-import Categories from "./Components/Categories/index"
+import EGames from "./Components/EGames/index"
+
+import hrefs from "./Components/Config/config"
+import Footer from "./Components/Footer"
+import EStreams from "./Components/EStreams"
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
@@ -17,14 +20,14 @@ const App: React.FC = () => {
         <Route path="/" exact>
           <MainPage />
         </Route>
-        <Route path="/categories" exact>
-          <Categories />
+        <Route path="/egames" exact>
+          <EGames />
         </Route>
-        <Route path="/streams" exact>
-          <div>streams</div>
+        <Route path="/estreams" exact>
+          <EStreams />
         </Route>
       </Switch>
-      <Footer />
+      <Footer socmed={hrefs} />
     </Router>
   )
 }

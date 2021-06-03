@@ -3,10 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 350px;
   position: relative;
-  border: 3px solid red;
 }
 .slider-inner {
   position: absolute;
@@ -16,15 +15,24 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 500px;
+  width: 203%;
   pointer-events: none;
   cursor: grab;
   transition: all 200ms ease-in;
-  border: 3px solid blue;
 }
 
 .slider-img {
   cursor: grab;
-  width: 100%;
+  width: 500px;
   margin: 1rem;
+}
+
+.svg-loading {
+  color: #fff;
+}
+
+@media (max-width: 920px) {
+  .slider {
+    display: none;
+  }
 }

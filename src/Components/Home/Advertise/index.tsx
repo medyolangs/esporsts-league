@@ -9,7 +9,10 @@ const Advert: React.FC = () => {
         <div className="adverts">
           <div className="stream-advert">
             <div className="stream-image">
-              <img src="./images/adverts/stream-image.jpg" alt="" />
+              <img
+                src="./images/adverts/stream-image.jpg"
+                alt="watch streams image"
+              />
             </div>
             <div className="stream-txt">
               <h1>Watch Streams</h1>
@@ -25,7 +28,10 @@ const Advert: React.FC = () => {
               <button className="ad-btn">Join</button>
             </div>
             <div className="event-image">
-              <img src="./images/adverts/game-tournament.jpg" alt="" />
+              <img
+                src="./images/adverts/game-tournament.jpg"
+                alt="live tournament image"
+              />
             </div>
           </div>
         </div>

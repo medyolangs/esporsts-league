@@ -1,0 +1,9 @@
+.egames {
+  text-align: center;
+}
+
+.egames h1 {
+  color: var(--secondary-color);
+  font-weight: 1000;
+  margin-top: 1rem;
+}

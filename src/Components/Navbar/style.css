@@ -119,4 +119,7 @@
   .mobile-menu-bar {
     display: block;
   }
+  .navbar .navbar-img {
+    width: 100px;
+  }
 }

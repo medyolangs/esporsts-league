@@ -27,9 +27,12 @@
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
-  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.trending-matches div {
+  font-weight: 1000;
 }
 
 .fat-arrow-icon {
@@ -53,13 +56,26 @@
   transition: background 200ms ease-in;
 }
 
-
 .active {
   background: #d60808;
 }
-.matches .match-nav .ogm:hover{
+.matches .match-nav .ogm:hover {
   background: #d60808;
 }
 .matches .match-nav .uce:hover {
   background: #d60808;
+}
+
+@media (max-width: 449px) {
+  .matches .match-nav .ogm,
+  .matches .match-nav .uce {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .matches .match-nav .ogm,
+  .matches .match-nav .uce {
+    font-size: 0.7rem;
+  }
 }

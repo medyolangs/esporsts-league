@@ -1,0 +1,9 @@
+.estreams {
+  text-align: center;
+}
+
+.estreams h1 {
+  margin-top: 1rem;
+  font-weight: 1000;
+  color: var(--secondary-color);
+}

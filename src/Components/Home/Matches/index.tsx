@@ -42,11 +42,36 @@ const Matches: React.FC = () => {
               Up Coming Events
             </div>
           </div>
-          <Match />
-          <Match />
-          <Match />
-          <Match />
-          <Match />
+          <Match
+            team1={"./images/teams/86.png"}
+            team2={"./images/teams/excalibur.png"}
+            teamNames={"Monster vs Excalibur"}
+            matchDetails={"match 1"}
+          />
+          <Match
+            team1={"./images/teams/bren-y-500.png"}
+            team2={"./images/teams/aura-256.png"}
+            teamNames={"Bren vs Aura"}
+            matchDetails={"match 2"}
+          />
+          <Match
+            team1={"./images/teams/omega-256.png"}
+            team2={"./images/teams/excalibur.png"}
+            teamNames={"Omega vs Excalibur "}
+            matchDetails={"match 2"}
+          />
+          <Match
+            team1={"./images/teams/onic.png"}
+            team2={"./images/teams/alter-ego.png"}
+            teamNames={"Onic vs Alter Ego"}
+            matchDetails={"match 1"}
+          />
+          <Match
+            team1={"./images/teams/86.png"}
+            team2={"./images/teams/bren-y-500.png"}
+            teamNames={"Monster vs Bren"}
+            matchDetails={"match 3"}
+          />
         </div>
       </div>
     </div>

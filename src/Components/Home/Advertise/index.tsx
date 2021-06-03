@@ -11,7 +11,7 @@ const Advert: React.FC = () => {
             <div className="stream-image">
               <img
                 src="./images/adverts/stream-image.jpg"
-                alt="watch streams image"
+                alt="watch streams"
               />
             </div>
             <div className="stream-txt">
@@ -30,7 +30,7 @@ const Advert: React.FC = () => {
             <div className="event-image">
               <img
                 src="./images/adverts/game-tournament.jpg"
-                alt="live tournament image"
+                alt="live tournament"
               />
             </div>
           </div>

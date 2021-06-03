@@ -9,7 +9,6 @@ interface Props {
 }
 
 const Footer: React.FC<Props> = ({ telNo, socmed }) => {
-  console.log(typeof socmed)
   return (
     <div className="footer">
       <div className="container">

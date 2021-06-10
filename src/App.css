@@ -1,5 +1,9 @@
-.container {
+.container-es {
   max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: none;
+  border: none;
+  outline: none;
 }
 
 @media (min-width: 1200px) {

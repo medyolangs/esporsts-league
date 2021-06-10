@@ -1,5 +1,9 @@
 .egames {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  height: 50vh; /* set a fixed height for now*/
+  z-index: 1;
 }
 
 .egames h1 {

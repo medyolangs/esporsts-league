@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 6rem;
 }
 
 .desc {
@@ -28,6 +29,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 5rem;
 }
 
 .ws-btn a {
@@ -69,7 +71,9 @@
 }
 
 .match-details {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
   color: #e7e7e7;
 }
 
@@ -80,6 +84,13 @@
   .desc {
     border: none;
     border-top: 1px solid var(--lame-color);
+    text-align: center;
+  }
+  .match-logo {
+    margin-left: 0;
+  }
+  .ws-btn {
+    margin-right: 0;
   }
 }
 

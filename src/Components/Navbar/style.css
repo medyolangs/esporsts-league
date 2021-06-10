@@ -1,5 +1,20 @@
+/* login and signup styles */
+.login {
+  margin: 0 1rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  background: var(--secondary-color);
+}
+.login .login-a {
+  font-size: 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+}
+
 /* new styles */
-.wrapper {
+.nav-wrapper {
   background: var(--primary-color);
   width: 100vw;
 }
@@ -11,6 +26,7 @@
   padding: 0;
   position: relative;
   padding: 0 2rem;
+  box-shadow: none;
 }
 
 .navbar .icon {
@@ -51,6 +67,10 @@
   transform: skewX(20deg);
 }
 
+.navbar .navbar-nav .nav {
+  align-items: flex-end;
+}
+
 .navbar .navbar-nav .nav li {
   margin-left: 2rem;
   position: relative;
@@ -59,7 +79,7 @@
 .navbar .navbar-nav .nav li a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 900;
   letter-spacing: 1px;
 }

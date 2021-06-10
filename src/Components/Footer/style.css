@@ -1,5 +1,4 @@
 .footer {
-  margin-top: 3rem;
   background: var(--primary-color);
   display: flex;
   flex-direction: column;
@@ -7,6 +6,7 @@
   align-items: flex-start;
   padding: 1rem 0;
   color: #fff;
+  border-top: 2px solid #272424;
 }
 
 .footer-wrapper {

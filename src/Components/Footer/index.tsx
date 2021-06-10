@@ -1,17 +1,17 @@
-import { MDBIcon } from "mdbreact"
-import React from "react"
+import { MDBIcon } from "mdbreact";
+import React from "react";
 
-import "./style.css"
+import "./style.css";
 
 interface Props {
-  telNo?: string
-  socmed: { href: string; icon: string }[]
+  telNo?: string;
+  socmed: { href: string; icon: string }[];
 }
 
 const Footer: React.FC<Props> = ({ telNo, socmed }) => {
   return (
     <div className="footer">
-      <div className="container">
+      <div className="container-es">
         <div className="footer-wrapper">
           <div className="about-us">
             <span className="abt-title">About Us</span>
@@ -68,7 +68,7 @@ const Footer: React.FC<Props> = ({ telNo, socmed }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

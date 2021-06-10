@@ -1,67 +1,69 @@
-import React from "react"
+import React from "react";
 
-import "./style.css"
+import "./style.css";
 
 interface Props {
-  image?: string
+  image?: string;
 }
 
 const Images: React.FC<Props> = ({ image }) => {
-  const [loading, setLoading] = React.useState<boolean>(true)
+  const [loading, setLoading] = React.useState<boolean>(true);
 
-  const innerSliderRef = React.useRef<HTMLDivElement>(null)
-  const slider = React.useRef<HTMLDivElement>(null)
+  const innerSliderRef = React.useRef<HTMLDivElement>(null);
+  const slider = React.useRef<HTMLDivElement>(null);
 
-  let [startx, setStartX] = React.useState<number>(0)
-  let [pressed, setPressed] = React.useState<boolean>(false)
-  let [x, setX] = React.useState<number>(0)
+  let [startx, setStartX] = React.useState<number>(0);
+  let [pressed, setPressed] = React.useState<boolean>(false);
+  let [x, setX] = React.useState<number>(0);
 
   const sliderF1 = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.type === "mousedown") {
-      setPressed(true)
+      setPressed(true);
       setStartX(
         e.nativeEvent.offsetX - (innerSliderRef.current?.offsetLeft || 0)
-      )
-      e.currentTarget.setAttribute("style", "cursor: grabbing")
+      );
+      e.currentTarget.setAttribute("style", "cursor: grabbing");
     }
     if (e.type === "mouseenter") {
-      e.currentTarget.setAttribute("style", "cursor: grab")
+      e.currentTarget.setAttribute("style", "cursor: grab");
     }
     if (e.type === "mouseup") {
-      e.currentTarget.setAttribute("style", "cursor: grab")
+      e.currentTarget.setAttribute("style", "cursor: grab");
     }
     if (e.type === "mousemove") {
-      if (!pressed) return
-      e.preventDefault()
-      setX(e.nativeEvent.offsetX)
-      innerSliderRef.current?.setAttribute("style", `left: ${x - startx}px`)
+      if (!pressed) return;
+      e.preventDefault();
+      setX(e.nativeEvent.offsetX);
+      innerSliderRef.current?.setAttribute("style", `left: ${x - startx}px`);
     }
-    checkBoundary()
-  }
+    checkBoundary();
+  };
 
   function checkBoundary() {
-    // let inner = innerSliderRef.current?.getBoundingClientRect()
-    // let outer = slider.current?.getBoundingClientRect()
-    // if (parseInt(innerSliderRef.current?.style.left) > 0) {
-    //   innerSliderRef.current.style.left = "0px"
-    // } else if (inner?.right < outer?.right) {
-    //   innerSliderRef.current?.style.left = `-${inner?.width - outer?.width}px`
-    // }
+    let inner = innerSliderRef.current?.getBoundingClientRect();
+    let outer = slider.current?.getBoundingClientRect();
+    if (parseInt(innerSliderRef.current?.style.left!) > 0) {
+      innerSliderRef.current!.style.left = "0px";
+    } else if (inner?.right! < outer?.right!) {
+      innerSliderRef.current!.style.left = `-${
+        inner?.width! - outer?.width!
+      }px`;
+    }
   }
 
   React.useEffect(() => {
     if (window.innerWidth <= 920) {
-      setLoading(false)
+      setLoading(false);
     } else {
       setTimeout(() => {
-        setLoading(false)
-      }, 2000)
+        setLoading(false);
+      }, 2000);
     }
-  }, [image])
+  }, [image]);
 
   window.addEventListener("mouseup", () => {
-    setPressed(false)
-  })
+    setPressed(false);
+  });
 
   return (
     <>
@@ -211,7 +213,7 @@ const Images: React.FC<Props> = ({ image }) => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Images
+export default Images;

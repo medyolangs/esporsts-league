@@ -14,7 +14,9 @@ import MatchPage from "./Components/Home/Matches/MatchPage/MatchPage";
 import { MatchContext } from "./Components/MatchContext/MatchContext";
 
 const App: React.FC = () => {
-  const [matchValue, setMatchValue] = React.useState<{}[]>([]);
+  const [matchValue, setMatchValue] = React.useState<
+    { matches: string; team1: string; team2: string; teamNames: string }[]
+  >([]);
 
   return (
     <>

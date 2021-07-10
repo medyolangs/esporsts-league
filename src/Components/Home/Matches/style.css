@@ -1,84 +1,91 @@
 .match-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .matches {
-  background: rgba(12, 11, 11, 0.8);
-  width: 100%;
+    background: rgba(12, 11, 11, 0.8);
+    width: 100%;
+}
+
+.no_events {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }
 
 .matches .match-nav {
-  width: 100%;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 900;
-  position: relative;
+    width: 100%;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+    position: relative;
 }
 
 .matches .match-nav div {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .trending-matches {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background: var(--primary-color);
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: var(--primary-color);
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
 }
 
 .trending-matches div {
-  font-weight: 1000;
+    font-weight: 1000;
 }
 
 .fat-arrow-icon {
-  color: var(--secondary-color);
-  margin-right: 1rem;
-  font-size: 2rem;
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    font-size: 2rem;
 }
 
 .matches .match-nav .ogm {
-  display: inline-block;
-  position: relative;
-  padding: 0.5rem;
-  text-transform: uppercase;
-  transition: background 200ms ease-in;
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    transition: background 200ms ease-in;
 }
 .matches .match-nav .uce {
-  display: inline-block;
-  position: relative;
-  padding: 0.5rem;
-  text-transform: uppercase;
-  transition: background 200ms ease-in;
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    transition: background 200ms ease-in;
 }
 
 .active {
-  background: #d60808;
+    background: #d60808;
 }
 .matches .match-nav .ogm:hover {
-  background: #d60808;
+    background: #d60808;
 }
 .matches .match-nav .uce:hover {
-  background: #d60808;
+    background: #d60808;
 }
 
 @media (max-width: 449px) {
-  .matches .match-nav .ogm,
-  .matches .match-nav .uce {
-    font-size: 1rem;
-  }
+    .matches .match-nav .ogm,
+    .matches .match-nav .uce {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 375px) {
-  .matches .match-nav .ogm,
-  .matches .match-nav .uce {
-    font-size: 0.7rem;
-  }
+    .matches .match-nav .ogm,
+    .matches .match-nav .uce {
+        font-size: 0.7rem;
+    }
 }

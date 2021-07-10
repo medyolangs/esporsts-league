@@ -7,7 +7,7 @@
   color: #fff;
   background: rgba(12, 11, 11, 0.8);
   border-bottom: 0.2px solid #3b3b3b;
-  transition: background-image 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   cursor: pointer;
 }
 
@@ -32,7 +32,7 @@
   margin-right: 5rem;
 }
 
-.ws-btn a {
+.ws-btn span {
   margin-left: 0.5rem;
   color: #f8f8f8;
   font-size: 0.8rem;
@@ -40,7 +40,7 @@
 
 /* make linear gradient */
 .match-card:hover {
-  background-image: linear-gradient(
+  background: linear-gradient(
     to right,
     rgb(12, 11, 11),
     rgb(122, 35, 35),

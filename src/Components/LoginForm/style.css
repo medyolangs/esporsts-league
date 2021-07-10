@@ -1,97 +1,113 @@
+/* prevent clicking out of the login when wrapper is clicked*/
+
 .login-form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 .login-form-wrapper .form-login {
-  background: var(--primary-color);
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  height: 340px;
-  width: 500px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 340px;
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
 }
 
 .login-form-wrapper .form-login div {
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .login-form-wrapper .form-login div .icon {
-  margin-right: 0.8rem;
+    margin-right: 0.8rem;
 }
 
 .form-login input,
 .form-login button {
-  width: 100%;
-  margin: 1rem 0.25rem;
-  border: none;
-  outline: none;
-  padding: 0.5rem;
+    width: 100%;
+    margin: 1rem 0.25rem;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
 }
 
 .form-login span {
-  text-align: center;
-  color: #fff;
+    text-align: center;
+    color: #fff;
 }
 
 .form-login span:nth-of-type(2) {
-  font-size: 0.85rem;
-  text-decoration: underline;
-  cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .form-login span:nth-of-type(2):hover {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .form-login button {
-  background: #123c8a;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 700;
+    background: #123c8a;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
 }
 
 .form-login button:hover {
-  background: #225bc5;
+    background: #225bc5;
 }
 
 .login-form-wrapper .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /* padding: 1.5rem; */
-  background: var(--secondary-color);
-  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 1.5rem; */
+    background: var(--secondary-color);
+    position: relative;
+    max-width: 1000px;
+    z-index: 1000;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 /* form side */
 .login-form-wrapper .form-side {
-  text-align: center;
-  padding: 1rem;
-  color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
 }
 
 .login-form-wrapper .form-side img {
-  width: 70%;
+    min-width: 50%;
+    width: 70%;
 }
 
 .login-form-wrapper .form-side p {
-  font-weight: 700;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+@media (max-width: 640px) {
+    .login-form-wrapper .form-side {
+        display: none;
+    }
 }

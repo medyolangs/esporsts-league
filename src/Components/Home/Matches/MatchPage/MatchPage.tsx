@@ -1,67 +1,67 @@
-import React, { useContext } from "react";
-import { MatchContext } from "../../../MatchContext/MatchContext";
+import React from "react";
+import { RootStateOrAny, useSelector } from "react-redux";
+import { InterfaceMatchDetails } from "../matchInterface";
 
 import "./style.css";
 
-interface MatchVal {
-  teamNames: string;
-  team1: string;
-  team2: string;
-  matches: string;
-}
-
 const MatchPage: React.FC = () => {
-  const { matchValue } = useContext(MatchContext);
-  console.log(window.location);
+    // matchDetails is from actionReducer, this will get the state of that individual reducer
+    const matchDetails = useSelector(
+        (state: RootStateOrAny) => state.matchDetails
+    );
 
-  const frSMVal: string[] = decodeURI(window.location.search.substr(1)).split(
-    "&"
-  );
-  const newValue = frSMVal
-    .filter((val) => val !== "")
-    .map((val) => {
-      const value = val.split("=")[1];
-      return value;
-    });
-  const matchFrURI: MatchVal[] = [
-    {
-      teamNames: newValue[0],
-      team1: newValue[1],
-      team2: newValue[2],
-      matches: newValue[3],
-    },
-  ];
+    const [data, setDataFromLocalStorage] =
+        React.useState<InterfaceMatchDetails>();
 
-  const [mVal, setMVal] = React.useState<MatchVal[]>([]);
-  React.useEffect(() => {
-    setMVal(matchFrURI || matchValue);
-  }, []);
+    const setItemToLocalStorage = React.useCallback(() => {
+        if (
+            matchDetails[0].team1 !== "" &&
+            JSON.parse(localStorage.getItem("match")!).team1 !==
+                matchDetails[0].team1
+        ) {
+            console.log("update the localStorage");
+            localStorage.setItem("match", JSON.stringify(matchDetails[0]));
+        }
+    }, [matchDetails]);
 
-  return (
-    <>
-      {mVal!.map((val, key) => (
-        <div key={key} className="match-page">
-          <div className="img-wrap">
-            <img
-              className="img1"
-              src={`../${val.team1}`}
-              alt={val!.teamNames.split(" ")[0]}
-            />
-            <img src="../images/versus.png" alt="versus" className="mp-vs" />
-            <img
-              className="img2"
-              src={`../${val.team2}`}
-              alt={val.teamNames.split(" ")[2]}
-            />
-          </div>
-          <div className="details-wrap">
-            <span className="matches">{val.matches}</span>
-            <div className="team-names">{val.teamNames}</div>
-          </div>
-        </div>
-      ))}
-    </>
-  );
+    React.useEffect(() => {
+        setItemToLocalStorage();
+        setDataFromLocalStorage(JSON.parse(localStorage.getItem("match")!));
+    }, [setItemToLocalStorage]);
+
+    return (
+        <>
+            {matchDetails!.map((val: InterfaceMatchDetails, key: number) => (
+                <div key={key} className="match-page">
+                    <div className="img-wrap">
+                        <img
+                            className="img1"
+                            src={`${data ? data.team1 : val.team1}`}
+                            alt={data ? data.teamNames : val!.teamNames}
+                        />
+                        <img
+                            src="../images/versus.png"
+                            alt="versus"
+                            className="mp-vs"
+                        />
+                        <img
+                            className="img2"
+                            src={`${data ? data.team2 : val.team2}`}
+                            alt={data ? data.teamNames : val.teamNames}
+                        />
+                    </div>
+                    <div className="details-wrap">
+                        <span className="matches">
+                            {data ? data.matches : val.matches}
+                        </span>
+                        <div className="team-names">
+                            {data ? data.teamNames : val.teamNames}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </>
+    );
 };
 
 export default MatchPage;

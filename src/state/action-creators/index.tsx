@@ -1,6 +1,6 @@
 import { InterfaceMatchDetails } from "../../Components/Home/Matches/matchInterface";
 
-const url = "http://localhost:5000";
+const url = "https://esports-server.herokuapp.com/";
 
 export const teamMatches =
     (teams: InterfaceMatchDetails[]) => (dispatch: any) => {
